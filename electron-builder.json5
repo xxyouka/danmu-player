@@ -1,0 +1,24 @@
+{
+  appId: 'com.danmu-player.app',
+  productName: 'DanmuPlayer',
+  directories: {
+    buildResources: 'build'
+  },
+  files: [
+    '!**/.vscode/*',
+    '!src/*',
+    '!electron/*',
+    '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}',
+    '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  ],
+  win: {
+    icon: 'resources/icon.png',
+    target: ['nsis']
+  },
+  nsis: {
+    oneClick: false,
+    perMachine: false,
+    allowToChangeInstallationDirectory: true,
+    deleteAppDataOnUninstall: true
+  }
+}
